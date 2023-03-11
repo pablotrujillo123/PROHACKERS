@@ -45,9 +45,8 @@ a {
     font-family: Hipervinculos;
     text-decoration: none;
     margin-inline-end: 390px;
-    background-color: rgb(43, 157, 223);36, 132, 187
+    background-color: rgb(43, 157, 223);
     color: white;
-    
     text-align: center;
 }
 
@@ -162,7 +161,7 @@ img.NFT {
     margin: 20px auto;
  }
   header nav {
-      background-color: rgb(36, 132, 187); 43, 157, 223
+      background-color: rgb(36, 132, 187); 
   }
 
   header nav ul li a {
