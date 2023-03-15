@@ -44,7 +44,7 @@ ul {
 a {
     font-family: Hipervinculos;
     text-decoration: none;
-    margin-inline-end: 390px;
+    margin-inline-end: 210px;
     background-color: rgb(43, 157, 223);
     color: white;
     text-align: center;
@@ -107,31 +107,7 @@ footer {
     font-family: Hipervinculos;
     src: url(../fonts/StickNoBills-VariableFont_wght.ttf);
 }
-table {
-    border: 1px solid white;
-    border-collapse:collapse;
-}
 
-table td {
-    border:1px solid white;
-    padding:30px;
-}
-
-table tr:hover {
-    background:rgb(238, 218, 41);
-}
-img.bitcoin {
-    width: 500px;
-    height: 350px;
-}
-img.ether {
-    width: 500px;
-    height: 350px;
-}
-img.NFT {
-    width: 500px;
-    height: 350px;
-}
 
 .row {
     display: flex;
@@ -161,7 +137,7 @@ img.NFT {
     margin: 20px auto;
  }
   header nav {
-      background-color: rgb(36, 132, 187); 
+      background-color: rgb(43, 157, 223); 
   }
 
   header nav ul li a {
@@ -170,7 +146,7 @@ img.NFT {
       text-decoration: none;
   }
    header nav ul li a:hover {
-       background: rgb(43, 157, 223);
+       background: rgb(25, 107, 155);
    }
 
    .main .articles {
@@ -240,29 +216,10 @@ form button {
     font-weight: bold;
 }
 
-.ether .coin {
-    width:68.5%;
-    margin-left: 1.5;
-    float:right;
-}
-.ether .coin article {
-    padding: 20px;
-    background: rgb(149, 235, 235);
-    margin-bottom: 20px;
-}
-
-.eth {
-    width: 30%;
-    float: left;
-    background: grey;
-}
-
-.ethlogo {
-    width: 400px;
+a#play{
+    background-color: black;
+    width:"50%" ;
+    height:"20%";
     display: block;
     margin: auto;
-}
-
-.videoeth {
-    background:grey;
 }
