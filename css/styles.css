@@ -234,3 +234,37 @@ a#play{
     display: block;
     text-align: center;
 }
+
+h2.tituloNS{
+    text-align: center;
+}
+
+h1{
+    color: white;
+    text-shadow: 1px 2px 2px black, 0 0 15px blue, 0 0 5px blue;
+    text-align: center;
+}
+
+div.galeria{
+    margin: 10px 20px;
+    box-shadow: 0 4px 8px 0 lightskyblue, 0 6xp 20xp o rgba(0,0,0,0,19);
+    float: left ;
+    width: 350px;
+}
+
+div.galeria img{
+    width: 100%;
+    height: auto;
+}
+
+div.galeria:hover{
+    border: 1px solid lightcoral;
+    transform: rotate(-3deg);
+
+}
+
+div.pie{
+    text-align: center;
+    text-shadow: 2px 2px 5px lightblue(70, 62, 105);
+    padding: 10px;
+}
