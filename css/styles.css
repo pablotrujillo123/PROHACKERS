@@ -66,6 +66,7 @@ nav a:hover{
 a{
     text-decoration: none;
     color: black;
+    margin-inline-end: 75px;
 }
 
 div#slider {
@@ -75,7 +76,7 @@ div#slider {
     background-size: cover;
     height: calc(70vh - 60px);
     animation: Cryptos 5s infinite;
-    animation-delay: 1.5s;
+    animation-delay: 0;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
 }
@@ -86,15 +87,15 @@ div#slider {
     }
 
     25% {
-        background-image: url("imagenes/jorge.JPG");
+        background-image: url(../imagenes/jorge.png);
     }
 
     50% {
-        background-image: url(../Imagenes/capitalizacon-mercado-criptomonedas-2-billones.jpg);
+        background-image: url(../imagenes/Pablo.png);
     }
 
     75% {
-        background-image: url(../Imagenes/criptomonedaspng.jpg);
+        background-image: url(../Imagenes/mauricio.png);
     }
 
     100% {
