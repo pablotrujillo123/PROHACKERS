@@ -1,8 +1,10 @@
 body {
-    background-color: black;
-    color: white;
+    background-image: url("img/background.png");
+    background-color: whitesmoke;
+    color: black;
     font-size: 22px;
     font-family: Titulo, Hipervinculos;
+    margin: 0;
 }
 
 img#logo {
@@ -11,12 +13,26 @@ img#logo {
     margin: auto;
 }
 
-.t-50 {
-    width: 50%;
+
+
+header{
+    display: flex;
+    min-height: 70px;
+    background-color: lightblue;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    
 }
 
-header {
-    display:ruby;
+.logo2{
+    display: flex;
+    align-items: center;
+}
+
+.logo2 img{
+    height: 50px;
+    margin-right: 10px;
 }
 
 h1 {
@@ -29,25 +45,27 @@ h2 {
 }
 
 nav {
-    width: 100%;
+    font-weight: 700;
+    padding-right: 10px;
 }
 
-ul {
-    list-style: square;
-    display: flex;
-    flex-direction: row;
-    float: center;
-    font-family: Hipervinculos;
-    margin: 100px;
+nav a:hover{
+    background: rgb(25, 107, 155);
 }
 
-a {
-    font-family: Hipervinculos;
+@media (max-width: 700px){
+    header{
+        flex-direction: column;
+    }
+
+    nav{
+        padding: 10px 0px;
+    }
+}
+
+a{
     text-decoration: none;
-    margin-inline-end: 210px;
-    background-color: rgb(43, 157, 223);
-    color: white;
-    text-align: center;
+    color: black;
 }
 
 div#slider {
@@ -68,7 +86,7 @@ div#slider {
     }
 
     25% {
-        background-image: url(../Imagenes/21742.webp);
+        background-image: url("imagenes/jorge.JPG");
     }
 
     50% {
@@ -95,7 +113,7 @@ footer {
     bottom: 0px;
     height: 27px;
     width: 100%;
-    background:black;
+    /*background:white;*/
 }
 
 @font-face {
@@ -135,19 +153,10 @@ footer {
      width: 90%;
      margin: auto;
     margin: 20px auto;
+    
  }
-  header nav {
-      background-color: rgb(43, 157, 223); 
-  }
+  
 
-  header nav ul li a {
-      padding: 35px 10x;
-      display: block;
-      text-decoration: none;
-  }
-   header nav ul li a:hover {
-       background: rgb(25, 107, 155);
-   }
 
    .main .articles {
        width:68.5%;
@@ -158,7 +167,7 @@ footer {
 
    .main .articles article {
        padding: 20px;
-       background: grey;
+       background: lightblue;
        margin-bottom: 20px;
    }
 
@@ -192,14 +201,14 @@ form h2 {
 .form.column input {
     height: 30px;
     background-color: transparent;
-    border: none;
+    border: black;
     border-bottom: 1px solid white;
     color: white;
 }
 
 .form.column textarea {
     background-color: transparent;
-    border: none;
+    border: black;
     border-bottom: 1px solid white;
     color: white;
 }
@@ -216,10 +225,11 @@ form button {
     font-weight: bold;
 }
 
+
 a#play{
-    background-color: black;
-    width:"50%" ;
-    height:"20%";
+    background-color: white;
+    width:"45%" ;
+    height:"18%";
     display: block;
-    margin: auto;
+    text-align: center;
 }
