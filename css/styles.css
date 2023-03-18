@@ -70,39 +70,37 @@ a{
 }
 
 div#slider {
-    background-image: url(https://bernardmarr.com/wp-content/uploads/2021/07/Bitcoin-Blockchain-Splits-And-What-It-Means-For-Business-Reszied.png);
+    
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
-    height: calc(70vh - 60px);
-    animation: Cryptos 5s infinite;
-    animation-delay: 0;
+    height: calc(70vh - 10px);
+    animation: Ph 10s infinite;
+    animation-delay: .1s;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
 }
 
-@keyframes Cryptos {
+@keyframes Ph {
     0% {
-        background-image: url(../Imagenes/210413132809-cnne-dinero-crypto-04132021-full-169.jpg);
+        background-image: url(../Imagenes/team1.jpg);
     }
 
     25% {
-        background-image: url(../imagenes/jorge.png);
+        background-image: url(../Imagenes/maubak.jpg);
     }
 
     50% {
-        background-image: url(../imagenes/Pablo.png);
+        background-image: url(../Imagenes/PyJ.jpg);
     }
 
     75% {
-        background-image: url(../Imagenes/mauricio.png);
+        background-image: url(../Imagenes/captura_inicio.png);
     }
 
     100% {
-        background-image: url(../Imagenes/shutterstock_1698227716.jpg_1093282975.jpg);
+        background-image: url(../Imagenes/captura_cayendo.png);
     }
 }
-
 article {
     text-align: justify;
     /*margin: 32px auto; */
@@ -126,6 +124,7 @@ footer {
     font-family: Hipervinculos;
     src: url(../fonts/StickNoBills-VariableFont_wght.ttf);
 }
+
 
 
 .row {
@@ -161,7 +160,7 @@ footer {
 
    .main .articles {
        width:68.5%;
-       margin-right: 1.5;
+       
        float:left;
       
    }
@@ -170,6 +169,7 @@ footer {
        padding: 20px;
        background: lightblue;
        margin-bottom: 20px;
+       
    }
 
    
