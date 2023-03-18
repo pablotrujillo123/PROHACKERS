@@ -127,25 +127,6 @@ class Player extends Sprite {
       this.updateHitbox()
   
       this.updateCamerabox()
-      // c.fillStyle = 'rgba(0, 0, 255, 0.2)'
-      // c.fillRect(
-      //   this.camerabox.position.x,
-      //   this.camerabox.position.y,
-      //   this.camerabox.width,
-      //   this.camerabox.height
-      // )
-  
-      // draws out the image
-      // c.fillStyle = 'rgba(0, 255, 0, 0.2)'
-      // c.fillRect(this.position.x, this.position.y, this.width, this.height)
-  
-      // c.fillStyle = 'rgba(255, 0, 0, 0.2)'
-      // c.fillRect(
-      //   this.hitbox.position.x,
-      //   this.hitbox.position.y,
-      //   this.hitbox.width,
-      //   this.hitbox.height
-      // )
   
       this.draw()
   
@@ -238,7 +219,7 @@ class Player extends Sprite {
         }
       }
   
-      // platform collision blocks
+      
       for (let i = 0; i < this.platformCollisionBlocks.length; i++) {
         const platformCollisionBlock = this.platformCollisionBlocks[i]
   
