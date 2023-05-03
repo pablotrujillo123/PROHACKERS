@@ -1,6 +1,7 @@
 body {
     background-image: url("img/background.png");
-    background-color: whitesmoke;
+
+    background: linear-gradient(to bottom right, #00ffff, #87cefa, #add8e6, #e0ffff);
     color: black;
     font-size: 22px;
     font-family: Titulo, Hipervinculos;
@@ -18,7 +19,7 @@ img#logo {
 header{
     display: flex;
     min-height: 70px;
-    background-color: lightblue;
+    /*background-color: lightblue;*/
     justify-content: space-between;
     align-items: center;
     padding: 10px;
@@ -113,6 +114,7 @@ footer {
     height: 27px;
     width: 100%;
     /*background:white;*/
+    
 }
 
 @font-face {
@@ -167,7 +169,8 @@ footer {
 
    .main .articles article {
        padding: 20px;
-       background: lightblue;
+       
+       /*background: lightblue;*/
        margin-bottom: 20px;
        
    }
@@ -244,7 +247,7 @@ h2.tituloNS{
 
 h1{
     color: white;
-    text-shadow: 1px 2px 2px black, 0 0 15px blue, 0 0 5px blue;
+    text-shadow: 1px 2px 2px black, 0 0 15px rgb(0, 0, 0), 0 0 5px rgb(0, 0, 0);
     text-align: center;
 }
 

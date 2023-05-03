@@ -66,41 +66,70 @@ const player = new Player({
   animations: {
     Idle: {
       imageSrc: 'img/jugador/Idle.png',
+
+  imageSrc: './img/jugador/Idle.png',
+  frameRate: 8,
+  animations: {
+    Idle: {
+      imageSrc: './img/jugador/Idle.png',
       frameRate: 8,
       frameBuffer: 3,
     },
     Run: {
+
       imageSrc: 'img/jugador/Run.png',
+
+      imageSrc: './img/jugador/Run.png',
       frameRate: 8,
       frameBuffer: 5,
     },
     Jump: {
+
       imageSrc: 'img/jugador/Jump.png',
+
+      imageSrc: './img/jugador/Jump.png',
       frameRate: 2,
       frameBuffer: 3,
     },
     Fall: {
+
       imageSrc: 'img/jugador/Fall.png',
+
+      imageSrc: './img/jugador/Fall.png',
       frameRate: 2,
       frameBuffer: 3,
     },
     FallLeft: {
+
       imageSrc: 'img/jugador/FallLeft.png',
+
       frameRate: 2,
       frameBuffer: 3,
     },
     RunLeft: {
+
       imageSrc: 'img/jugador/RunLeft.png',
+
+      imageSrc: './img/jugador/RunLeft.png',
+
       frameRate: 8,
       frameBuffer: 5,
     },
     IdleLeft: {
+
       imageSrc: 'img/jugador/IdleLeft.png',
+
+      imageSrc: './img/jugador/IdleLeft.png',
+
       frameRate: 8,
       frameBuffer: 3,
     },
     JumpLeft: {
+
       imageSrc: 'img/jugador/JumpLeft.png',
+
+      imageSrc: './img/jugador/JumpLeft.png',
+
       frameRate: 2,
       frameBuffer: 3,
     },
