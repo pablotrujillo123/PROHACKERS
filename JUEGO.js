@@ -10,8 +10,8 @@ const scaledCanvas = {
 }
 
 const floorCollisions2D = []
-for (let i = 0; i < floorCollisions2D.length; i += 36) {
-  floorCollisions2D.push(floorCollisions2D.slice(i, i + 36))
+for (let i = 0; i < floorCollisions.length; i += 36) {
+  floorCollisions2D.push(floorCollisions.slice(i, i + 36))
 }
 
 const collisionBlocks = []
@@ -19,7 +19,7 @@ floorCollisions2D.forEach((row, y) => {
   row.forEach((symbol, x) => {
     if (symbol === 202) {
       collisionBlocks.push(
-        new collisionBlocks({
+        new CollisionBlock({
           position: {
             x: x * 16,
             y: y * 16,
@@ -31,8 +31,8 @@ floorCollisions2D.forEach((row, y) => {
 })
 
 const platformCollisions2D = []
-for (let i = 0; i < platformCollisions2D.length; i += 36) {
-  platformCollisions2D.push(platformCollisions2D.slice(i, i + 36))
+for (let i = 0; i < platformCollisions.length; i += 36) {
+  platformCollisions2D.push(platformCollisions.slice(i, i + 36))
 }
 
 const platformCollisionBlocks = []
@@ -40,7 +40,7 @@ platformCollisions2D.forEach((row, y) => {
   row.forEach((symbol, x) => {
     if (symbol === 202) {
       platformCollisionBlocks.push(
-        new collisionBlocks({
+        new CollisionBlock({
           position: {
             x: x * 16,
             y: y * 16,
@@ -61,75 +61,46 @@ const player = new Player({
   },
   collisionBlocks,
   platformCollisionBlocks,
-  imageSrc: 'img/jugador/Idle.png',
+  imageSrc: './img/warrior/Idle.png',
   frameRate: 8,
   animations: {
     Idle: {
-      imageSrc: 'img/jugador/Idle.png',
-
-  imageSrc: './img/jugador/Idle.png',
-  frameRate: 8,
-  animations: {
-    Idle: {
-      imageSrc: './img/jugador/Idle.png',
+      imageSrc: './img/warrior/Idle.png',
       frameRate: 8,
       frameBuffer: 3,
     },
     Run: {
-
-      imageSrc: 'img/jugador/Run.png',
-
-      imageSrc: './img/jugador/Run.png',
+      imageSrc: './img/warrior/Run.png',
       frameRate: 8,
       frameBuffer: 5,
     },
     Jump: {
-
-      imageSrc: 'img/jugador/Jump.png',
-
-      imageSrc: './img/jugador/Jump.png',
+      imageSrc: './img/warrior/Jump.png',
       frameRate: 2,
       frameBuffer: 3,
     },
     Fall: {
-
-      imageSrc: 'img/jugador/Fall.png',
-
-      imageSrc: './img/jugador/Fall.png',
+      imageSrc: './img/warrior/Fall.png',
       frameRate: 2,
       frameBuffer: 3,
     },
     FallLeft: {
-
-      imageSrc: 'img/jugador/FallLeft.png',
-
+      imageSrc: './img/warrior/FallLeft.png',
       frameRate: 2,
       frameBuffer: 3,
     },
     RunLeft: {
-
-      imageSrc: 'img/jugador/RunLeft.png',
-
-      imageSrc: './img/jugador/RunLeft.png',
-
+      imageSrc: './img/warrior/RunLeft.png',
       frameRate: 8,
       frameBuffer: 5,
     },
     IdleLeft: {
-
-      imageSrc: 'img/jugador/IdleLeft.png',
-
-      imageSrc: './img/jugador/IdleLeft.png',
-
+      imageSrc: './img/warrior/IdleLeft.png',
       frameRate: 8,
       frameBuffer: 3,
     },
     JumpLeft: {
-
-      imageSrc: 'img/jugador/JumpLeft.png',
-
-      imageSrc: './img/jugador/JumpLeft.png',
-
+      imageSrc: './img/warrior/JumpLeft.png',
       frameRate: 2,
       frameBuffer: 3,
     },
@@ -150,7 +121,7 @@ const background = new Sprite({
     x: 0,
     y: 0,
   },
-  imageSrc: 'img/background.png',
+  imageSrc: './img/background2.png',
 })
 
 const backgroundImageHeight = 432
@@ -237,4 +208,3 @@ window.addEventListener('keyup', (event) => {
       break
   }
 })
-     
