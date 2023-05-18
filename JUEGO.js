@@ -133,6 +133,33 @@ const camera = {
   },
 }
 
+class Coin {
+  constructor(position, size, imageSrc) {
+    this.position = position;
+    this.size = size;
+    this.image = new Image();
+    this.image.src = imageSrc;
+  }
+
+  draw() {
+    c.drawImage(this.image, this.position.x, this.position.y, this.size, this.size);
+  }
+}
+
+const coins = [];
+const numCoins = 30; // Cambia esto al número deseado de monedas
+
+for (let i = 0; i < numCoins; i++) {
+  const coinSize = 16; // Tamaño de la moneda
+  const coinPosition = {
+    x: Math.random() * (canvas.width - coinSize),
+    y: Math.random() * (canvas.height - coinSize),
+  };
+  const coinImageSrc = './img/coin.png'; // Ruta de la imagen de la moneda
+  const coin = new Coin(coinPosition, coinSize, coinImageSrc);
+  coins.push(coin);
+}
+
 function animate() {
   window.requestAnimationFrame(animate)
   c.fillStyle = 'white'
@@ -142,13 +169,10 @@ function animate() {
   c.scale(4, 4)
   c.translate(camera.position.x, camera.position.y)
   background.update()
-  // collisionBlocks.forEach((collisionBlock) => {
-  //   collisionBlock.update()
-  // })
 
-  // platformCollisionBlocks.forEach((block) => {
-  //   block.update()
-  // })
+  coins.forEach((coin) => {
+    coin.draw();
+  });
 
   player.checkForHorizontalCanvasCollision()
   player.update()
