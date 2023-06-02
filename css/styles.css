@@ -234,7 +234,7 @@ button:hover{
 
 
 a#play{
-    background-color: white;
+    /*background-color: white;*/
     width:"45%" ;
     height:"18%";
     display: block;
@@ -285,9 +285,7 @@ h2.piecontact{
     text-align: center;
 }
 
-<<<<<<< Updated upstream
 
 
 
-=======
->>>>>>> Stashed changes
+
