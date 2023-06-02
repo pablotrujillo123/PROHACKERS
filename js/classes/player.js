@@ -240,6 +240,12 @@ class Player extends Sprite {
           }
         }
       }
+
+      for (let i = 0; i < coins.length; i++) {
+        const coin = coins[i]
+
+        
+      }
     }
   }
   
