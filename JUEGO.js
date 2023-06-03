@@ -148,7 +148,7 @@ class Coin {
 }
 
 const coins = [];
-const numCoins = 200; // Cambia esto al número deseado de monedas
+const numCoins = 500; // Cambia esto al número deseado de monedas
 
 for (let i = 0; i < numCoins; i++) {
   const coinSize = 10; // Tamaño de la moneda
@@ -174,10 +174,32 @@ for (let i = 0; i < numCoins; i++) {
   coins.push(coin);
 }
 
+let timeRemaining = 60; // Tiempo inicial en segundos
+let coinCount = 0; // Contador de monedas
+
+function sumarTiempo() {
+  timeRemaining += 10; // Sumar 10 segundos
+}
+
+function updateTimer() {
+  c.fillStyle = 'black';
+  c.font = '24px Arial';
+  c.fillText(`Time: ${timeRemaining} s`, 10, 30);
+}
+
+function updateCoinCount() {
+  c.fillStyle = 'black';
+  c.font = '24px Arial';
+  c.fillText(`Coins: ${coinCount}`, 10, 60);
+}
+
 function animate() {
   window.requestAnimationFrame(animate)
   c.fillStyle = 'white'
   c.fillRect(0, 0, canvas.width, canvas.height)
+
+  updateTimer(); // Actualizar el temporizador en cada cuadro
+  updateCoinCount(); // Actualizar el contador de monedas en cada cuadro
 
   c.save()
   c.scale(4, 4)
@@ -191,15 +213,16 @@ function animate() {
   player.checkForHorizontalCanvasCollision()
   player.update()
 
+
   player.velocity.x = 0
   if (keys.d.pressed) {
     player.switchSprite('Run')
-    player.velocity.x = 2
+    player.velocity.x = 0.8
     player.lastDirection = 'right'
     player.shouldPanCameraToTheLeft({ canvas, camera })
   } else if (keys.a.pressed) {
     player.switchSprite('RunLeft')
-    player.velocity.x = -2
+    player.velocity.x = -0.8
     player.lastDirection = 'left'
     player.shouldPanCameraToTheRight({ canvas, camera })
   } else if (player.velocity.y === 0) {
@@ -217,32 +240,38 @@ function animate() {
     else player.switchSprite('FallLeft')
   }
 
-  c.restore()
+  
+
+  c.restore();
 }
 
-animate()
+animate();
+
 
 window.addEventListener('keydown', (event) => {
   switch (event.key) {
     case 'd':
-      keys.d.pressed = true
-      break
+      keys.d.pressed = true;
+      break;
     case 'a':
-      keys.a.pressed = true
-      break
+      keys.a.pressed = true;
+      break;
     case 'w':
-      player.velocity.y = -4
-      break
+      if (player.velocity.y === 0) {
+        keys.w = { pressed: true };
+        player.velocity.y = -4;
+      }
+      break;
   }
-})
+});
 
 window.addEventListener('keyup', (event) => {
   switch (event.key) {
     case 'd':
-      keys.d.pressed = false
-      break
+      keys.d.pressed = false;
+      break;
     case 'a':
-      keys.a.pressed = false
-      break
+      keys.a.pressed = false;
+      break;
   }
-})
+});
