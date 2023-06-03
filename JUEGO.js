@@ -1,8 +1,8 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = 1850
-canvas.height = 850
+canvas.width = 1024
+canvas.height = 576
 
 const scaledCanvas = {
   width: canvas.width / 4,
@@ -148,7 +148,7 @@ class Coin {
 }
 
 const coins = [];
-const numCoins = 500; // Cambia esto al número deseado de monedas
+const numCoins = 100; // Cambia esto al número deseado de monedas
 
 for (let i = 0; i < numCoins; i++) {
   const coinSize = 10; // Tamaño de la moneda
@@ -174,32 +174,29 @@ for (let i = 0; i < numCoins; i++) {
   coins.push(coin);
 }
 
-let timeRemaining = 60; // Tiempo inicial en segundos
-let coinCount = 0; // Contador de monedas
+const tiempoLimite = 60; // Cambia el valor según tus necesidades
+let tiempoRestante = tiempoLimite;
+let temporizador;
 
-function sumarTiempo() {
-  timeRemaining += 10; // Sumar 10 segundos
-}
-
-function updateTimer() {
+function actualizarTemporizador() {
   c.fillStyle = 'black';
   c.font = '24px Arial';
-  c.fillText(`Time: ${timeRemaining} s`, 10, 30);
-}
-
-function updateCoinCount() {
-  c.fillStyle = 'black';
-  c.font = '24px Arial';
-  c.fillText(`Coins: ${coinCount}`, 10, 60);
+  c.fillText(`Tiempo restante: ${tiempoRestante}s`, 10, 30);
+  if (tiempoRestante === 0) {
+    clearInterval(temporizador);
+    alert('¡Tiempo agotado!');
+  } else {
+    tiempoRestante--;
+  }
 }
 
 function animate() {
+  temporizador = setInterval(actualizarTemporizador, 6000);
   window.requestAnimationFrame(animate)
   c.fillStyle = 'white'
   c.fillRect(0, 0, canvas.width, canvas.height)
 
-  updateTimer(); // Actualizar el temporizador en cada cuadro
-  updateCoinCount(); // Actualizar el contador de monedas en cada cuadro
+  
 
   c.save()
   c.scale(4, 4)
