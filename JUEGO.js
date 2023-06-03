@@ -1,8 +1,8 @@
 const canvas = document.querySelector('canvas')
 const c = canvas.getContext('2d')
 
-canvas.width = 1024
-canvas.height = 576
+canvas.width = 1850
+canvas.height = 850
 
 const scaledCanvas = {
   width: canvas.width / 4,
@@ -59,6 +59,7 @@ const player = new Player({
     x: 100,
     y: 300,
   },
+  canJump: true,
   collisionBlocks,
   platformCollisionBlocks,
   imageSrc: './img/warrior/Idle.png',
@@ -147,14 +148,27 @@ class Coin {
 }
 
 const coins = [];
-const numCoins = 30; // Cambia esto al número deseado de monedas
+const numCoins = 200; // Cambia esto al número deseado de monedas
 
 for (let i = 0; i < numCoins; i++) {
-  const coinSize = 16; // Tamaño de la moneda
+  const coinSize = 10; // Tamaño de la moneda
   const coinPosition = {
-    x: Math.random() * (canvas.width - coinSize),
+    x: Math.random() * ( canvas.width - coinSize),
     y: Math.random() * (canvas.height - coinSize),
   };
+
+  if (coinPosition.x < 0) {
+    coinPosition.x = 0;
+  } else if (coinPosition.x + coinSize > canvas.width) {
+    coinPosition.x = canvas.width - coinSize;
+  }
+
+  if (coinPosition.y < 0) {
+    coinPosition.y = 0;
+  } else if (coinPosition.y + coinSize > canvas.height) {
+    coinPosition.y = canvas.height - coinSize;
+  }
+  
   const coinImageSrc = './img/coin.png'; // Ruta de la imagen de la moneda
   const coin = new Coin(coinPosition, coinSize, coinImageSrc);
   coins.push(coin);

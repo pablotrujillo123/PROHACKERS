@@ -121,6 +121,21 @@ class Player extends Sprite {
         camera.position.y -= this.velocity.y
       }
     }
+
+    checkCoinCollision(coins) {
+      coins.forEach((coin, index) => {
+        if (
+          this.position.x < coin.position.x + coin.size &&
+          this.position.x + this.width > coin.position.x &&
+          this.position.y < coin.position.y + coin.size &&
+          this.position.y + this.height > coin.position.y
+        ) {
+          coins.splice(index, 1); // Eliminamos la moneda del arreglo
+          // Aquí puedes agregar cualquier lógica adicional que necesites
+        }
+      });
+    }
+    
   
     update() {
       this.updateFrames()
@@ -129,6 +144,7 @@ class Player extends Sprite {
       this.updateCamerabox()
   
       this.draw()
+      this.checkCoinCollision(coins);
   
       this.position.x += this.velocity.x
       this.updateHitbox()
