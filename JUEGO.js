@@ -191,7 +191,7 @@ function actualizarTemporizador() {
 }
 
 function animate() {
-  temporizador = setInterval(actualizarTemporizador, 6000);
+  temporizador = setInterval(actualizarTemporizador, 30000);
   window.requestAnimationFrame(animate)
   c.fillStyle = 'white'
   c.fillRect(0, 0, canvas.width, canvas.height)
