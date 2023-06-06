@@ -160,6 +160,8 @@ for (let i = 0; i < numCoins; i++) {
   coins.push(coin);
 }
 
+
+
 function animate() {
   window.requestAnimationFrame(animate)
   c.fillStyle = 'white'
